@@ -18,8 +18,8 @@
       "registryUrls": [
         "https://nginx.org/packages/ubuntu?suite=jammy&components=nginx&binaryArch=amd64"
       ],
-      "groupName": "Ubuntu packages"
-      "groupSlug": "ubuntu-packages",
+      "groupName": "Ubuntu packages",
+      "groupSlug": "ubuntu-packages"
     }
   ]
 }
