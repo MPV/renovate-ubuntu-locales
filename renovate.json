@@ -16,7 +16,7 @@
     {
       "matchDatasources": ["deb"],
       "registryUrls": [
-        "https://archive.ubuntu.com/ubuntu?release=jammy&components=main,restricted&binaryArch=amd64"
+        "https://archive.ubuntu.com/ubuntu?release=jammy&components=universe,multiverse,main,restricted&binaryArch=amd64"
       ],
       "groupName": "Ubuntu packages",
       "groupSlug": "ubuntu-packages"
