@@ -1,0 +1,25 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["config:best-practices"],
+  "commitMessageSuffix": "(from {{currentVersion}})",
+  "customManagers": [
+    {
+      "customType": "regex",
+      "fileMatch": ["^Dockerfile$"],
+      "matchStrings": [
+        "#\\s*renovate:\\s*datasource=(?<datasource>.*?) depName=(?<depName>.*?)( versioning=(?<versioning>.*?))?\\sENV .*?_VERSION=\"(?<currentValue>.*)\"\\s"
+      ],
+      "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}semver{{/if}}"
+    }
+  ],
+  "packageRules": [
+    {
+      "matchDatasources": ["deb"],
+      "registryUrls": [
+        "https://nginx.org/packages/ubuntu?suite=jammy&components=nginx&binaryArch=amd64"
+      ],
+      "groupName": "Ubuntu packages"
+      "groupSlug": "ubuntu-packages",
+    }
+  ]
+}
