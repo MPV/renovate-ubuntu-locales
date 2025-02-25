@@ -12,7 +12,7 @@ ENV GNUPG2_VERSION="2.2.27-3ubuntu2.1"
 # renovate: datasource=deb depName=logrotate
 ENV LOGROTATE_VERSION="3.19.0-1ubuntu1.1"
 
-# renovate: datasource=deb depName=tzdata
+# renovate: datasource=deb depName=tzdata versioning=loose
 ENV TZDATA_VERSION="2024b-0ubuntu0.22.04.1"
 
 RUN apt-get update \
