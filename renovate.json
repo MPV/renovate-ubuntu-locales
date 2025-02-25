@@ -17,6 +17,9 @@
       "matchDatasources": ["deb"],
       "registryUrls": [
         "https://archive.ubuntu.com/ubuntu?release=jammy&components=universe,multiverse,main,restricted&binaryArch=amd64"
+        "https://archive.ubuntu.com/ubuntu?release=jammy-security&components=universe,multiverse,main,restricted&binaryArch=amd64"
+        "https://archive.ubuntu.com/ubuntu?release=jammy-updates&components=universe,multiverse,main,restricted&binaryArch=amd64"
+        "https://archive.ubuntu.com/ubuntu?release=jammy-backports&components=universe,main&binaryArch=amd64"
       ],
       "groupName": "Ubuntu packages",
       "groupSlug": "ubuntu-packages"
