@@ -1,11 +1,15 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["config:best-practices"],
+  "extends": [
+    "config:best-practices"
+  ],
   "commitMessageSuffix": "(from {{currentVersion}})",
   "customManagers": [
     {
       "customType": "regex",
-      "fileMatch": ["^Dockerfile$"],
+      "managerFilePatterns": [
+        "/^Dockerfile$/"
+      ],
       "matchStrings": [
         "#\\s*renovate:\\s*datasource=(?<datasource>.*?) depName=(?<depName>.*?)( versioning=(?<versioning>.*?))?\\sENV .*?_VERSION=\"(?<currentValue>.*)\"\\s"
       ],
@@ -14,7 +18,9 @@
   ],
   "packageRules": [
     {
-      "matchDatasources": ["deb"],
+      "matchDatasources": [
+        "deb"
+      ],
       "registryUrls": [
         "https://archive.ubuntu.com/ubuntu?release=jammy&components=universe,multiverse,main,restricted&binaryArch=amd64",
         "https://archive.ubuntu.com/ubuntu?release=jammy-security&components=universe,multiverse,main,restricted&binaryArch=amd64",
